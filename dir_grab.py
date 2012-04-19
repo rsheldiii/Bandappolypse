@@ -25,6 +25,10 @@ for item in group:
     if os.path.isdir(os.path.join(path, item)):
         dirs.append(item)
 new_dirs = [artist.replace(",","%2C") for artist in dirs]
-dirs = new_dirs    
-print ",".join(dirs)
+dirs = new_dirs
+string = ",".join(dirs)
+out_file = open("band_file.txt","w")
+out_file.write(string)
+out_file.close()
+#print string
 
